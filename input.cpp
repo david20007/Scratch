@@ -16,6 +16,9 @@ void FreeBlockTextures() {
     for (auto& b : scriptBlocks) if (b->textTexture) SDL_DestroyTexture(b->textTexture);
 }
 
+
+
+
 void Handle_Sprite_Drag_And_Drop(Sprite& s, Stage& st, const SDL_Event& e, int mx, int my) {
     if (!s.isDraggable) return;
     if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button==SDL_BUTTON_LEFT && IsMouseOverRect(s.rect,mx,my)) {
